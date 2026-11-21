@@ -1,74 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HIRANYA ROYALE — Whitefield, Bengaluru</title>
+<title>HIRANYA ROYALE</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif}
-body{background:#faf8f5;color:#1c1917;line-height:1.6}
-nav{background:#fff;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #d4af37;position:sticky;top:0;z-index:99}
-.logo{font-size:22px;font-weight:900;color:#042f2e;letter-spacing:1.5px}
-.nav-btn{background:#042f2e;color:#fde047;padding:9px 20px;border-radius:6px;font-weight:700;border:1.5px solid #d4af37;cursor:pointer}
-.hero{background:linear-gradient(90deg,rgba(4,47,46,.88),rgba(4,47,46,.72)),url('./Assetz-City-of-Palms-7.jpg') center/cover no-repeat;color:#fff;padding:80px 6% 100px;border-bottom:4px solid #d4af37}
-.hero-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.2fr .9fr;gap:36px;align-items:center}
-.tag{display:inline-block;background:rgba(212,175,55,.22);border:1px solid #d4af37;color:#fde047;padding:5px 14px;border-radius:4px;font-size:12px;font-weight:700;margin-bottom:15px}
-.hero h1{font-size:44px;font-weight:900;line-height:1.15;margin-bottom:14px}
-.hero h1 span{color:#fde047}
-.hero p{font-size:18px;color:#f1f5f9;margin-bottom:25px}
-.form-box{background:#fff;color:#1c1917;padding:28px;border-radius:12px;border-top:5px solid #d4af37;box-shadow:0 20px 45px rgba(0,0,0,.35)}
-.form-box h3{color:#042f2e;font-size:20px;margin-bottom:14px}
-.form-box input,.form-box select{width:100%;padding:11px;margin-bottom:12px;border:1.5px solid #d6d3d1;border-radius:6px;font-size:14px}
-.btn-gold{background:linear-gradient(135deg,#d4af37,#b48a1e);color:#fff;border:none;padding:13px 24px;border-radius:6px;font-size:15px;font-weight:800;cursor:pointer}
-.btn-out{background:rgba(4,47,46,.6);color:#fde047;border:1.5px solid #fde047;padding:12px 22px;border-radius:6px;font-size:15px;font-weight:700;cursor:pointer}
-.proof{max-width:1100px;margin:-40px auto 55px;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
-.p-card{background:#fff;padding:24px;border-radius:10px;text-align:center;border-bottom:4px solid #d4af37;box-shadow:0 10px 25px rgba(0,0,0,.07)}
-.p-card h3{font-size:28px;color:#042f2e;font-weight:900}
-.p-card p{font-size:12px;color:#78716c;font-weight:700;text-transform:uppercase}
-.sec{max-width:1100px;margin:65px auto;padding:0 20px}
-.sec h2{text-align:center;font-size:32px;color:#042f2e;margin-bottom:35px}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.card{background:#fff;padding:28px;border-radius:12px;border:1px solid #e7e5e4;box-shadow:0 8px 20px rgba(0,0,0,.04)}
-.card h3{color:#042f2e;font-size:22px;margin-bottom:8px}
-.card p{color:#57534e;font-size:15px;margin-bottom:16px}
-.spec{background:#faf8f5;padding:12px;border-left:3px solid #d4af37;font-weight:700;font-size:14px;margin-bottom:16px}
-.ben{background:#042f2e;color:#fff;padding:50px 28px;border-radius:16px}
-.ben h2{color:#fde047}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.b-item{background:rgba(255,255,255,.07);padding:20px;border-radius:10px;border:1px solid rgba(212,175,55,.4)}
-.b-item h4{color:#fde047;margin-bottom:6px}
-.cta{background:linear-gradient(rgba(4,47,46,.85),rgba(4,47,46,.92)),url('./Assetz-City-of-Palms-7.jpg') center/cover;color:#fff;padding:55px 24px;border-radius:16px;text-align:center;border:2px solid #d4af37}
-.cta h2{color:#fde047;margin-bottom:12px}
-.pop{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);justify-content:center;align-items:center;z-index:999}
-.pop-in{background:#fff;padding:30px;border-radius:12px;border-top:5px solid #d4af37;max-width:410px;width:90%;text-align:center;position:relative}
-.cls{position:absolute;top:10px;right:16px;font-size:26px;cursor:pointer;font-weight:bold}
-.wa{display:block;margin-top:16px;background:#16a34a;color:#fff;padding:13px;border-radius:6px;text-decoration:none;font-weight:800}
-footer{background:#02201f;color:#a8a29e;text-align:center;padding:24px;margin-top:60px;font-size:13px}
-@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero h1{font-size:32px}}
+body{margin:0;font-family:Arial,sans-serif;background:#faf8f5;color:#1c1917}
+nav{background:#fff;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #d4af37}
+.logo{font-size:22px;font-weight:900;color:#042f2e}
+.btn{background:#d4af37;color:#fff;border:none;padding:12px 22px;border-radius:6px;font-weight:700;cursor:pointer}
+.hero{background:linear-gradient(rgba(4,47,46,.82),rgba(4,47,46,.82)),url('./Assetz-City-of-Palms-7.jpg') center/cover;color:#fff;padding:70px 6%;display:grid;grid-template-columns:1.2fr .9fr;gap:30px;align-items:center}
+.hero h1{font-size:40px;margin:0 0 12px}
+.hero span{color:#fde047}
+.box{background:#fff;color:#1c1917;padding:22px;border-radius:10px;border-top:5px solid #d4af37}
+.box input,.box select{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px;box-sizing:border-box}
+.sec{max-width:1050px;margin:45px auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:#fff;padding:22px;border-radius:10px;border-top:4px solid #042f2e;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.ben{background:#042f2e;color:#fff;padding:35px 25px;border-radius:12px}
+.pop{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);justify-content:center;align-items:center}
+.pop-in{background:#fff;padding:26px;border-radius:10px;max-width:360px;width:90%;text-align:center}
+@media(max-width:768px){.hero{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<nav><div class="logo">HIRANYA ROYALE</div><button class="nav-btn" onclick="document.getElementById('vPop').style.display='flex'">Schedule Visit</button></nav>
-<section class="hero"><div class="hero-grid">
-<div><div class="tag">RERA Certified • Whitefield, Bengaluru</div><h1>A Home That Speaks <span>Your Success.</span></h1><p>Crafted in Light, Space, and Serenity — Iconic 2, 3 & 4 BHK Vastu residences amidst 78% lush greenery.</p><button class="btn-gold" onclick="document.getElementById('pPop').style.display='flex'">💎 Download Price Sheet</button> <button class="btn-out" onclick="document.getElementById('vPop').style.display='flex'">🚘 Book VIP Tour</button></div>
-<div class="form-box"><h3>Get Instant Price Sheet & Offers</h3><form onsubmit="goWa(event)"><input type="text" id="n" placeholder="Full Name *" required><input type="tel" id="p" placeholder="WhatsApp Number *" required><select id="b"><option>2 BHK Signature Suite (1,340 Sq.Ft.)</option><option selected>3 BHK Grand Corner Home (1,920 Sq.Ft.)</option><option>4 BHK Sovereign Sky Villa (3,200 Sq.Ft.)</option></select><button type="submit" class="btn-gold" style="width:100%">Unlock Cost Sheet on WhatsApp →</button></form></div>
-</div></section>
-<div class="proof"><div class="p-card"><h3>78%</h3><p>Open Green Podium</p></div><div class="p-card"><h3>35+</h3><p>Clubhouse Amenities</p></div><div class="p-card"><h3>650+</h3><p>Happy Families</p></div><div class="p-card"><h3>100%</h3><p>RERA & Vastu Approved</p></div></div>
-<div class="sec"><h2>Signature Residences Crafted for Comfort</h2><div class="grid3">
-<div class="card"><h3>2 BHK Signature Suites</h3><p>Zero-wastage layouts with sunlit living rooms & garden decks.</p><div class="spec">📐 1,340 – 1,480 Sq.Ft. • Vastu</div><button class="btn-gold" style="width:100%" onclick="document.getElementById('pPop').style.display='flex'">Get 2 BHK Price Sheet</button></div>
-<div class="card"><h3>3 BHK Grand Corner Homes</h3><p>Three-side open ventilation, no common walls & private foyer.</p><div class="spec">📐 1,920 – 2,250 Sq.Ft. • Dual Decks</div><button class="btn-gold" style="width:100%" onclick="document.getElementById('pPop').style.display='flex'">Get 3 BHK Price Sheet</button></div>
-<div class="card"><h3>4 BHK Sovereign Sky Villas</h3><p>Double-height salon, Italian marble & private terrace lounge.</p><div class="spec">📐 3,200 – 3,650 Sq.Ft. • Private Lift</div><button class="btn-gold" style="width:100%" onclick="document.getElementById('pPop').style.display='flex'">Get 4 BHK Price Sheet</button></div>
+<nav><div class="logo">HIRANYA ROYALE</div><button class="btn" onclick="p1.style.display='flex'">Book VIP Visit</button></nav>
+<section class="hero">
+<div><h1>A Home That Speaks <span>Your Success.</span></h1><p>Crafted in Light, Space, and Serenity — Iconic 2, 3 & 4 BHK Luxury Residences in Whitefield, Bengaluru.</p><button class="btn" onclick="p2.style.display='flex'">💎 Download Price Sheet</button></div>
+<div class="box"><h3 style="margin-top:0;color:#042f2e">Get Instant Price Sheet</h3><form onsubmit="event.preventDefault();window.open('https://wa.me)"><input id="n" placeholder="Your Name" required><input id="p" placeholder="WhatsApp Number" required><select id="b"><option>2 BHK Signature Suite</option><option>3 BHK Grand Corner Home</option><option>4 BHK Sky Villa</option></select><button class="btn" style="width:100%">Send on WhatsApp →</button></form></div>
+</section>
+<div class="sec"><h2 style="text-align:center;color:#042f2e">Signature Residences</h2><div class="grid">
+<div class="card"><h3>2 BHK Suites</h3><p>1,340 Sq.Ft. • Vastu Compliant • Garden View</p><button class="btn" onclick="p2.style.display='flex'">Price Sheet</button></div>
+<div class="card"><h3>3 BHK Corner Homes</h3><p>1,920 Sq.Ft. • Zero Common Walls • Dual Decks</p><button class="btn" onclick="p2.style.display='flex'">Price Sheet</button></div>
+<div class="card"><h3>4 BHK Sky Villas</h3><p>3,200 Sq.Ft. • Private Lift • Italian Marble</p><button class="btn" onclick="p2.style.display='flex'">Price Sheet</button></div>
 </div></div>
-<div class="sec"><div class="ben"><h2>Why Discerning Homebuyers Choose Hiranya</h2><div class="grid2">
-<div class="b-item"><h4>🏛️ Architectural Brilliance</h4><p>Maximum natural light, cross-ventilation & zero common walls.</p></div>
-<div class="b-item"><h4>🏊 32,000 Sq.Ft. Clubhouse</h4><p>Rooftop infinity pool, mini-theatre, indoor sports & spa.</p></div>
-<div class="b-item"><h4>📍 Prime Whitefield Location</h4><p>4 mins to Purple Line Metro, 6 mins to ITPL & top schools.</p></div>
-<div class="b-item"><h4>🏦 100% Bank & RERA Approved</h4><p>Pre-approved loans from SBI, HDFC, ICICI & Axis Bank.</p></div>
+<div class="sec"><div class="ben"><h2 style="color:#fde047;text-align:center">Why Choose Hiranya Royale</h2><div class="grid">
+<div><h4>🌿 78% Open Greens</h4><p>Vehicle-free podium & 32,000 sq.ft. clubhouse.</p></div>
+<div><h4>📍 Prime Whitefield</h4><p>4 mins to Metro & 6 mins to ITPL Tech Parks.</p></div>
+<div><h4>🛡️ 100% RERA Approved</h4><p>Pre-approved loans from SBI, HDFC & ICICI.</p></div>
 </div></div></div>
-<div class="sec"><div class="cta"><h2>Experience Your Future Home in Person</h2><p style="margin-bottom:22px">Book a complimentary chauffeur-driven family site tour & save up to ₹18 Lakhs.</p><button class="btn-gold" onclick="document.getElementById('vPop').style.display='flex'">🚘 Schedule Free VIP Site Visit</button></div></div>
-<div id="pPop" class="pop"><div class="pop-in"><span class="cls" onclick="document.getElementById('pPop').style.display='none'">&times;</span><h2>Pre-Launch Cost Sheet</h2><p>✔ Save up to ₹18 Lakhs Today<br>✔ Zero Floor-Rise Charges<br>✔ 2, 3 & 4 BHK Master Floor Plans</p><a href="https://wa.me." class="wa">💬 Get PDF on WhatsApp</a></div></div>
-<div id="vPop" class="pop"><div class="pop-in"><span class="cls" onclick="document.getElementById('vPop').style.display='none'">&times;</span><h2>Book Chauffeur VIP Visit</h2><p>Tour our furnished model apartment in Whitefield with complimentary home pick-up & drop.</p><a href="https://wa.me." class="wa">💬 Confirm Visit on WhatsApp</a></div></div>
-<footer>© 2026 HIRANYA ROYALE • Whitefield, Bengaluru. All Rights Reserved.</footer>
-<script>function goWa(e){e.preventDefault();window.open("https://wa.me"+encodeURIComponent(document.getElementById('n').value)+"%0APhone:%20"+encodeURIComponent(document.getElementById('p').value)+"%0AFlat:%20"+encodeURIComponent(document.getElementById('b').value),"_blank")}</script>
+<div id="p1" class="pop"><div class="pop-in"><h3>Schedule VIP Site Visit</h3><p>Complimentary pick-up & drop for your family.</p><a class="btn" style="text-decoration:none;display:block" href="https://wa.me">Confirm on WhatsApp</a><br><button onclick="p1.style.display='none'">Close</button></div></div>
+<div id="p2" class="pop"><div class="pop-in"><h3>Pre-Launch Price Sheet</h3><p>Save up to ₹18 Lakhs on early bookings!</p><a class="btn" style="text-decoration:none;display:block" href="https://wa.me">Get PDF on WhatsApp</a><br><button onclick="p2.style.display='none'">Close</button></div></div>
 </body>
 </html>
