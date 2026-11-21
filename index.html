@@ -1,54 +1,146 @@
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif}
-html{scroll-behavior:smooth}
-body{background:#faf8f5;color:#1c1917;line-height:1.6}
-nav{background:#fff;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #c59b27;position:sticky;top:0;z-index:100;box-shadow:0 4px 18px rgba(0,0,0,.06)}
-.logo{font-size:21px;font-weight:900;color:#042f2e;letter-spacing:1.5px}
-.nav-menu{display:flex;gap:16px;align-items:center}
-.nav-menu a{text-decoration:none;color:#1c1917;font-size:13px;font-weight:700;text-transform:uppercase}
-.nav-cta{background:linear-gradient(135deg,#d4af37,#b48a1e);color:#fff;border:none;padding:10px 20px;border-radius:30px;font-weight:800;font-size:12px;cursor:pointer;text-transform:uppercase}
-.hero{background:linear-gradient(180deg,rgba(0,0,0,.22) 0%,rgba(0,0,0,.1) 45%,rgba(0,0,0,.85) 100%),url('./Assetz-City-of-Palms-7.jpg') center/cover no-repeat;min-height:90vh;padding:85px 6% 55px;display:flex;flex-direction:column;justify-content:space-between;text-align:center;color:#fff;border-bottom:4px solid #c59b27}
-.hero h1{font-size:50px;font-weight:900;margin-bottom:12px;text-shadow:0 4px 20px rgba(0,0,0,.85)}
-.hero span{color:#fde047}
-.hero p{font-size:19px;max-width:720px;margin:0 auto;text-shadow:0 3px 14px rgba(0,0,0,.95)}
-.icon-row{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin:30px auto 25px}
-.icon-item{display:flex;flex-direction:column;align-items:center;gap:8px}
-.circle{width:70px;height:70px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center}
-.circle svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.8}
-.icon-item span{font-size:14px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,.9)}
-.cta-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
-.pill-gold{background:linear-gradient(90deg,#d4af37,#f3d27a,#c59b27);color:#1c1917;border:none;padding:15px 36px;border-radius:50px;font-size:15px;font-weight:800;text-transform:uppercase;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,.4)}
-.pill-dark{background:rgba(4,47,46,.9);color:#fde047;border:1.5px solid #fde047;padding:14px 28px;border-radius:50px;font-size:14px;font-weight:800;text-transform:uppercase;cursor:pointer}
-.sec{max-width:1120px;margin:65px auto;padding:0 20px}
-.sec-title{text-align:center;margin-bottom:35px}
-.sec-title span{color:#9a7b2c;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-.sec-title h2{font-size:32px;color:#042f2e;margin-top:4px;font-weight:800}
-.about-box{background:#fff;border:1px solid #e7e5e4;border-radius:14px;padding:34px 26px;text-align:center;box-shadow:0 8px 25px rgba(0,0,0,.05)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:24px;padding-top:22px;border-top:1px solid #e7e5e4}
-.stats h3{font-size:28px;color:#042f2e;font-weight:900}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-.card{background:#fff;padding:26px 22px;border-radius:12px;border-top:4px solid #042f2e;box-shadow:0 6px 20px rgba(0,0,0,.05)}
-.card h3{color:#042f2e;font-size:21px;margin-bottom:8px}
-.spec{background:#faf8f5;padding:10px;border-left:3px solid #c59b27;font-size:14px;font-weight:700;margin:14px 0}
-.card-btn{width:100%;background:#042f2e;color:#fde047;border:1.5px solid #c59b27;padding:11px;border-radius:6px;font-weight:800;cursor:pointer}
-.video-sec{position:relative;border-radius:16px;overflow:hidden;min-height:420px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;border:2px solid #c59b27;background:#042f2e}
-.bg-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.v-over{position:relative;z-index:2;background:rgba(4,47,46,.68);padding:45px 24px;width:100%}
-.v-over h2{font-size:34px;color:#fde047;margin-bottom:10px}
-.ben-box{background:linear-gradient(135deg,#042f2e,#065f46);color:#fff;padding:44px 26px;border-radius:16px}
-.ben-box h2{color:#fde047}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.b-card{background:rgba(255,255,255,.08);border:1px solid rgba(253,224,71,.35);padding:20px;border-radius:10px}
-.b-card h4{color:#fde047;margin-bottom:6px}
-.gal-img{height:180px;background:linear-gradient(rgba(4,47,46,.3),rgba(4,47,46,.65)),url('./Assetz-City-of-Palms-7.jpg') center/cover;display:flex;align-items:flex-end;padding:16px;color:#fde047;font-weight:800;font-size:18px;border-radius:8px;margin-bottom:10px}
-.loc-card{background:#fff;padding:22px;border-radius:10px;text-align:center;border-bottom:4px solid #c59b27;box-shadow:0 6px 18px rgba(0,0,0,.05)}
-.loc-card h3{font-size:26px;color:#9a7b2c;font-weight:900}
-.final-cta{background:linear-gradient(rgba(4,47,46,.85),rgba(4,47,46,.92)),url('./Assetz-City-of-Palms-7.jpg') center/cover;color:#fff;padding:50px 22px;border-radius:16px;text-align:center;border:2px solid #c59b27}
-.final-cta h2{font-size:32px;color:#fde047;margin-bottom:10px}
-.float-bar{position:fixed;bottom:0;left:0;width:100%;background:#042f2e;border-top:2px solid #c59b27;padding:10px;display:flex;justify-content:center;gap:12px;z-index:95}
-.float-btn{background:#d4af37;color:#1c1917;border:none;padding:9px 18px;border-radius:4px;font-weight:800;font-size:12px;cursor:pointer;text-transform:uppercase}
-.pop{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.82);justify-content:center;align-items:center;z-index:999}
-.pop-in{background:#fff;padding:28px 24px;border-radius:12px;border-top:5px solid #c59b27;max-width:400px;width:90%;position:relative}
-.cls{position:absolute;top:10px;right:16px;font-size:26px;cursor:pointer;font-weight:bold}
-.pop-in input,.pop-in select{width:100%;padding:11px;margin:7px 0;border:1.5px solid #d6d3d1;border-radius:6px}
-footer{background:#02201f;color:#a8a29e;text-align:center;padding:24px 20px 70px;margin-top:50px;font-size:13px}
-@media(max-width:800px){.nav-menu a{display:none}.hero h1{font-size:34px}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HIRANYA ROYALE — Whitefield, Bengaluru</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">HIRANYA ROYALE</div>
+  <div class="nav-menu">
+    <a href="#about">About</a>
+    <a href="#plans">Plans</a>
+    <a href="#walkthrough">Loop Video</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#location">Location</a>
+    <button class="nav-cta" onclick="openForm('Enquire Now')">Enquire Now</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1>A Home That Speaks <span>Your Success.</span></h1>
+    <p>Crafted in Light, Space, and Serenity — Iconic 2, 3 & 4 BHK Residences Amidst 78% Lush Open Greens in Whitefield.</p>
+  </div>
+  <div>
+    <div class="icon-row">
+      <div class="icon-item"><div class="circle"><svg viewBox="0 0 24 24"><circle cx="14" cy="10" r="6"/><line x1="4" y1="20" x2="10" y2="14"/></svg></div><span>Sports Courts</span></div>
+      <div class="icon-item"><div class="circle"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 20V10l6-5 6 5v10"/></svg></div><span>Kids Play Areas</span></div>
+      <div class="icon-item"><div class="circle"><svg viewBox="0 0 24 24"><path d="M12 22v-9M12 13c-4 0-7-3-7-7 4 0 7 3 7 7zM12 13c4 0 7-3 7-7-4 0-7 3-7 7z"/></svg></div><span>Landscaped Gardens</span></div>
+      <div class="icon-item"><div class="circle"><svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><path d="M6 19c2-4 10-4 12 0"/></svg></div><span>Yoga Spaces</span></div>
+    </div>
+    <div class="cta-row">
+      <button class="pill-gold" onclick="openForm('Download Brochure & Cost Sheet')">DOWNLOAD BROCHURE →</button>
+      <button class="pill-dark" onclick="openForm('Schedule VIP Site Visit')">BOOK VIP SITE VISIT</button>
+    </div>
+  </div>
+</section>
+
+<div class="sec" id="about">
+  <div class="about-box">
+    <div class="sec-title"><span>About The Project</span><h2>A Landmark Address in East Bengaluru</h2></div>
+    <p>Spread across 12.5 acres in Whitefield, <strong>Hiranya Royale</strong> offers Vastu-compliant homes with zero common walls, panoramic sky decks, and resort-style clubhouse privileges.</p>
+    <div class="stats">
+      <div><h3>12.5 Acres</h3><p>Total Township</p></div>
+      <div><h3>78%</h3><p>Open Green Space</p></div>
+      <div><h3>35+</h3><p>Clubhouse Amenities</p></div>
+      <div><h3>100%</h3><p>RERA Approved</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec" id="plans">
+  <div class="sec-title"><span>Master Plans & Configurations</span><h2>Signature Residences Crafted for Comfort</h2></div>
+  <div class="grid3">
+    <div class="card"><h3>2 BHK Signature Suites</h3><p>Sunlit living rooms & private garden-facing balconies.</p><div class="spec">📐 1,340 – 1,480 Sq.Ft. • 100% Vastu</div><button class="card-btn" onclick="openForm('2 BHK Floor Plan & Cost Sheet')">Get 2 BHK Price Sheet</button></div>
+    <div class="card"><h3>3 BHK Grand Corner Homes</h3><p>Three-side open ventilation, zero common walls & dual decks.</p><div class="spec">📐 1,920 – 2,250 Sq.Ft. • Corner Units</div><button class="card-btn" onclick="openForm('3 BHK Floor Plan & Cost Sheet')">Get 3 BHK Price Sheet</button></div>
+    <div class="card"><h3>4 BHK Sovereign Sky Villas</h3><p>Double-height salon, Italian marble & private terrace lounge.</p><div class="spec">📐 3,200 – 3,650 Sq.Ft. • Private Lift</div><button class="card-btn" onclick="openForm('4 BHK Floor Plan & Cost Sheet')">Get 4 BHK Price Sheet</button></div>
+  </div>
+</div>
+
+<div class="sec" id="walkthrough">
+  <div class="video-sec">
+    <video class="bg-video" autoplay loop muted playsinline poster="./Assetz-City-of-Palms-7.jpg">
+      <source src="./tour.mp4" type="video/mp4">
+      <source src="https://mixkit.co" type="video/mp4">
+    </video>
+    <div class="v-over">
+      <h2>Project Walkthrough & 360° Virtual Tour</h2>
+      <p style="margin-bottom:22px">Experience our grand entrance boulevard, 32,000 sq.ft. royal clubhouse & sunlit interiors in seamless loop.</p>
+      <div class="cta-row">
+        <button class="pill-gold" onclick="openForm('360° Virtual Tour Access')">▶ LAUNCH VIRTUAL TOUR</button>
+        <button class="pill-dark" onclick="openForm('Live Video Walkthrough')">📹 LIVE VIDEO WALKTHROUGH</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec" id="amenities">
+  <div class="ben-box">
+    <div class="sec-title"><span style="color:#fde047">Project Benefits</span><h2>Why Homebuyers Choose Hiranya Royale</h2></div>
+    <div class="grid2">
+      <div class="b-card"><h4>🏛️ Architectural Brilliance</h4><p>Maximum natural light, cross-ventilation & zero common walls.</p></div>
+      <div class="b-card"><h4>🏊 32,000 Sq.Ft. Clubhouse</h4><p>Rooftop infinity pool, mini-theatre, indoor sports & luxury spa.</p></div>
+      <div class="b-card"><h4>🏦 100% Bank & RERA Approved</h4><p>Pre-approved loans from SBI, HDFC, ICICI & Axis Bank.</p></div>
+      <div class="b-card"><h4>🔒 3-Tier Smart Security</h4><p>Biometric lobby access, 24/7 CCTV, EV charging & power backup.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec" id="gallery">
+  <div class="sec-title"><span>Visual Gallery</span><h2>Glimpses of Everyday Indulgence</h2></div>
+  <div class="grid3">
+    <div class="card"><div class="gal-img">Grand Arrival Plaza</div><p>Palm-lined double-height entrance lobby with five-star concierge.</p></div>
+    <div class="card"><div class="gal-img">Botanical Podium Greens</div><p>Vehicle-free central courtyard with jogging tracks & yoga decks.</p></div>
+    <div class="card"><div class="gal-img">Skyline Infinity Deck</div><p>Temperature-controlled rooftop pool overlooking Whitefield.</p></div>
+  </div>
+</div>
+
+<div class="sec" id="location">
+  <div class="sec-title"><span>Prime Connectivity</span><h2>Strategically Located in Whitefield</h2></div>
+  <div class="grid3" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+    <div class="loc-card"><h3>4 Mins</h3><p>Purple Line Metro</p></div>
+    <div class="loc-card"><h3>6 Mins</h3><p>ITPL Tech Parks</p></div>
+    <div class="loc-card"><h3>7 Mins</h3><p>Global Schools</p></div>
+    <div class="loc-card"><h3>9 Mins</h3><p>Manipal Hospital</p></div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="final-cta">
+    <h2>Experience Your Future Home in Person</h2>
+    <p style="margin-bottom:22px">Book a complimentary chauffeur-driven family site tour & save up to ₹18 Lakhs.</p>
+    <button class="pill-gold" onclick="openForm('Schedule VIP Site Visit')">🚘 BOOK VIP SITE VISIT →</button>
+  </div>
+</div>
+
+<div class="float-bar">
+  <button class="float-btn" onclick="openForm('Request a Callback')">📞 Request a Callback</button>
+  <button class="float-btn" onclick="openForm('Download Brochure')">📄 Download Brochure</button>
+  <button class="float-btn" onclick="openForm('Virtual Tour')">🎥 Virtual Tour</button>
+</div>
+
+<div id="fPop" class="pop">
+  <div class="pop-in">
+    <span class="cls" onclick="fPop.style.display='none'">&times;</span>
+    <h3 id="popTitle" style="text-align:center;color:#042f2e;margin-bottom:10px">Download Brochure</h3>
+    <form onsubmit="event.preventDefault();window.open('https://wa.me)">
+      <input id="n" type="text" placeholder="Your Name *" required>
+      <input id="p" type="tel" placeholder="Mobile Number *" required>
+      <input id="e" type="email" placeholder="Your Email *" required>
+      <button type="submit" class="pill-gold" style="width:100%;margin-top:8px;padding:12px">SUBMIT & GET DETAILS →</button>
+    </form>
+  </div>
+</div>
+
+<footer>© 2026 HIRANYA ROYALE • Whitefield, Bengaluru. All Rights Reserved.</footer>
+
+<script>
+function openForm(t){document.getElementById('popTitle').innerText=t;document.getElementById('fPop').style.display='flex'}
+</script>
+</body>
+</html>
