@@ -8,30 +8,39 @@
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif}
 html{scroll-behavior:smooth}
 body{background:#faf8f5;color:#1c1917;line-height:1.6}
+a{text-decoration:none}
+
+/* Sticky Navbar */
 nav{background:#fff;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #c59b27;position:sticky;top:0;z-index:100;box-shadow:0 4px 18px rgba(0,0,0,.06)}
 .logo{font-size:21px;font-weight:900;color:#042f2e;letter-spacing:1.5px}
 .nav-menu{display:flex;gap:18px;align-items:center}
-.nav-menu a{text-decoration:none;color:#1c1917;font-size:13px;font-weight:700;text-transform:uppercase}
-.nav-cta{background:#d4af37;color:#1c1917;border:none;padding:10px 20px;border-radius:30px;font-weight:800;font-size:12px;cursor:pointer;text-transform:uppercase}
+.nav-menu a.link{color:#1c1917;font-size:13px;font-weight:700;text-transform:uppercase}
+.nav-cta{background:#d4af37;color:#1c1917;padding:10px 20px;border-radius:30px;font-weight:800;font-size:12px;text-transform:uppercase;display:inline-block}
 
 /* 1. STARTING FULL-SCREEN HOME PAGE */
 .hero{background:linear-gradient(180deg,rgba(0,0,0,.22) 0%,rgba(0,0,0,.12) 45%,rgba(0,0,0,.85) 100%),url('./Assetz-City-of-Palms-7.jpg') center/cover no-repeat;min-height:92vh;padding:85px 6% 55px;display:flex;flex-direction:column;justify-content:space-between;text-align:center;color:#fff;border-bottom:4px solid #c59b27}
 .hero h1{font-size:50px;font-weight:900;margin-bottom:12px;text-shadow:0 4px 20px rgba(0,0,0,.85)}
 .hero span{color:#fde047}
 .hero p{font-size:19px;max-width:740px;margin:0 auto;text-shadow:0 3px 14px rgba(0,0,0,.95)}
+
+/* Clickable Circular Pop Icons */
 .icon-row{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin:30px auto 25px}
-.icon-item{display:flex;flex-direction:column;align-items:center;gap:8px}
-.circle{width:68px;height:68px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center}
+.icon-item{display:flex;flex-direction:column;align-items:center;gap:8px;color:#fff;transition:transform .2s}
+.icon-item:hover{transform:scale(1.08)}
+.circle{width:68px;height:68px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center}
+.icon-item:hover .circle{border-color:#fde047;background:rgba(4,47,46,.85)}
 .icon-item span{font-size:14px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,.9)}
+
+/* Pill Buttons */
 .cta-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
-.pill-gold{background:linear-gradient(90deg,#d4af37,#f3d27a,#c59b27);color:#1c1917;border:none;padding:15px 36px;border-radius:50px;font-size:15px;font-weight:800;text-transform:uppercase;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,.4)}
-.pill-dark{background:rgba(4,47,46,.9);color:#fde047;border:1.5px solid #fde047;padding:14px 28px;border-radius:50px;font-size:14px;font-weight:800;text-transform:uppercase;cursor:pointer}
+.pill-gold{background:linear-gradient(90deg,#d4af37,#f3d27a,#c59b27);color:#1c1917;border:none;padding:15px 36px;border-radius:50px;font-size:15px;font-weight:800;text-transform:uppercase;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,.4);display:inline-block}
+.pill-dark{background:rgba(4,47,46,.9);color:#fde047;border:1.5px solid #fde047;padding:14px 28px;border-radius:50px;font-size:14px;font-weight:800;text-transform:uppercase;cursor:pointer;display:inline-block}
 
 /* 2. FULL-SCREEN EDGE-TO-EDGE LOOP VIDEO SECTION */
-.video-sec{position:relative;width:100%;min-height:82vh;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;border-bottom:4px solid #c59b27;background:#042f2e}
+.video-sec{position:relative;width:100%;min-height:80vh;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;border-bottom:4px solid #c59b27;background:#042f2e}
 .bg-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.v-over{position:relative;z-index:2;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.52) 100%);padding:80px 6%;width:100%;min-height:82vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.v-over h2{font-size:44px;color:#fde047;margin-bottom:14px;text-shadow:0 4px 18px rgba(0,0,0,.9)}
+.v-over{position:relative;z-index:2;background:linear-gradient(180deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,.55) 100%);padding:80px 6%;width:100%;min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.v-over h2{font-size:42px;color:#fde047;margin-bottom:14px;text-shadow:0 4px 18px rgba(0,0,0,.9)}
 .v-over p{font-size:19px;max-width:720px;margin:0 auto 28px;text-shadow:0 2px 12px rgba(0,0,0,.9)}
 
 /* Shared Sections */
@@ -40,7 +49,7 @@ nav{background:#fff;padding:14px 5%;display:flex;justify-content:space-between;a
 .sec-title span{color:#9a7b2c;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
 .sec-title h2{font-size:32px;color:#042f2e;margin-top:4px;font-weight:800}
 
-/* 3. ABOUT, PLANS, AMENITIES, LOCATION */
+/* About, Plans, Amenities, Location */
 .about-box{background:#fff;border:1px solid #e7e5e4;border-radius:14px;padding:34px 26px;text-align:center;box-shadow:0 8px 25px rgba(0,0,0,.05)}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:24px;padding-top:22px;border-top:1px solid #e7e5e4}
 .stats h3{font-size:28px;color:#042f2e;font-weight:900}
@@ -48,7 +57,7 @@ nav{background:#fff;padding:14px 5%;display:flex;justify-content:space-between;a
 .card{background:#fff;padding:26px 22px;border-radius:12px;border-top:4px solid #042f2e;box-shadow:0 6px 20px rgba(0,0,0,.05)}
 .card h3{color:#042f2e;font-size:21px;margin-bottom:8px}
 .spec{background:#faf8f5;padding:10px;border-left:3px solid #c59b27;font-size:14px;font-weight:700;margin:14px 0}
-.card-btn{width:100%;background:#042f2e;color:#fde047;border:1.5px solid #c59b27;padding:11px;border-radius:6px;font-weight:800;cursor:pointer}
+.card-btn{display:block;text-align:center;width:100%;background:#042f2e;color:#fde047;border:1.5px solid #c59b27;padding:11px;border-radius:6px;font-weight:800;font-size:14px}
 .ben-box{background:linear-gradient(135deg,#042f2e,#065f46);color:#fff;padding:44px 26px;border-radius:16px}
 .ben-box h2{color:#fde047}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
@@ -57,15 +66,19 @@ nav{background:#fff;padding:14px 5%;display:flex;justify-content:space-between;a
 .loc-card{background:#fff;padding:22px;border-radius:10px;text-align:center;border-bottom:4px solid #c59b27;box-shadow:0 6px 18px rgba(0,0,0,.05)}
 .loc-card h3{font-size:26px;color:#9a7b2c;font-weight:900}
 
-/* Popup Form & Sticky Bar */
+/* Sticky Bottom Bar */
 .float-bar{position:fixed;bottom:0;left:0;width:100%;background:#042f2e;border-top:2px solid #c59b27;padding:10px;display:flex;justify-content:center;gap:12px;z-index:95}
-.float-btn{background:#d4af37;color:#1c1917;border:none;padding:9px 18px;border-radius:4px;font-weight:800;font-size:12px;cursor:pointer;text-transform:uppercase}
-.pop{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.82);justify-content:center;align-items:center;z-index:999}
-.pop-in{background:#fff;padding:28px 24px;border-radius:12px;border-top:5px solid #c59b27;max-width:400px;width:90%;position:relative}
-.cls{position:absolute;top:10px;right:16px;font-size:26px;cursor:pointer;font-weight:bold}
-.pop-in input{width:100%;padding:11px;margin:7px 0;border:1.5px solid #d6d3d1;border-radius:6px}
+.float-btn{background:#d4af37;color:#1c1917;padding:9px 18px;border-radius:4px;font-weight:800;font-size:12px;text-transform:uppercase;display:inline-block}
+
+/* 100% PURE CSS POPUP MODAL (Works without JS!) */
+.pop{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);justify-content:center;align-items:center;z-index:999}
+.pop:target{display:flex}
+.pop-in{background:#fff;padding:30px 24px;border-radius:12px;border-top:5px solid #c59b27;max-width:400px;width:90%;position:relative;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.cls{position:absolute;top:8px;right:16px;font-size:30px;color:#042f2e;font-weight:bold}
+.pop-in input,.pop-in select{width:100%;padding:11px;margin:7px 0;border:1.5px solid #d6d3d1;border-radius:6px;font-size:14px}
+
 footer{background:#02201f;color:#a8a29e;text-align:center;padding:24px 20px 70px;margin-top:50px;font-size:13px}
-@media(max-width:800px){.nav-menu a{display:none}.hero h1,.v-over h2{font-size:32px}}
+@media(max-width:800px){.nav-menu a.link{display:none}.hero h1,.v-over h2{font-size:32px}}
 </style>
 </head>
 <body>
@@ -73,16 +86,16 @@ footer{background:#02201f;color:#a8a29e;text-align:center;padding:24px 20px 70px
 <nav>
   <div class="logo">HIRANYA ROYALE</div>
   <div class="nav-menu">
-    <a href="#walkthrough">Loop Video</a>
-    <a href="#about">About</a>
-    <a href="#plans">Plans</a>
-    <a href="#amenities">Amenities</a>
-    <a href="#location">Location</a>
-    <button class="nav-cta" onclick="openForm('Enquire Now')">Enquire Now</button>
+    <a class="link" href="#walkthrough">Loop Video</a>
+    <a class="link" href="#about">About</a>
+    <a class="link" href="#plans">Plans</a>
+    <a class="link" href="#amenities">Amenities</a>
+    <a class="link" href="#location">Location</a>
+    <a class="nav-cta" href="#popup">Enquire Now</a>
   </div>
 </nav>
 
-<!-- 1. STARTING FULL-SCREEN HOME PAGE -->
+<!-- 1. STARTING FULL-SCREEN HOME PAGE WITH CLICKABLE POP ICONS -->
 <section class="hero">
   <div>
     <h1>A Home That Speaks <span>Your Success.</span></h1>
@@ -90,30 +103,41 @@ footer{background:#02201f;color:#a8a29e;text-align:center;padding:24px 20px 70px
   </div>
   <div>
     <div class="icon-row">
-      <div class="icon-item"><div class="circle"><svg width="28" height="28" stroke="#fff" fill="none" stroke-width="2" viewBox="0 0 24 24"><circle cx="14" cy="10" r="6"/><line x1="4" y1="20" x2="10" y2="14"/></svg></div><span>Sports Courts</span></div>
-      <div class="icon-item"><div class="circle"><svg width="28" height="28" stroke="#fff" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M3 20h18M6 20V10l6-5 6 5v10"/></svg></div><span>Kids Play Areas</span></div>
-      <div class="icon-item"><div class="circle"><svg width="28" height="28" stroke="#fff" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22v-9M12 13c-4 0-7-3-7-7 4 0 7 3 7 7zM12 13c4 0 7-3 7-7-4 0-7 3-7 7z"/></svg></div><span>Landscaped Gardens</span></div>
-      <div class="icon-item"><div class="circle"><svg width="28" height="28" stroke="#fff" fill="none" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><path d="M6 19c2-4 10-4 12 0"/></svg></div><span>Yoga Spaces</span></div>
+      <a class="icon-item" href="#popup">
+        <div class="circle"><svg width="28" height="28" stroke="#fff" fill="none" stroke-width="2" viewBox="0 0 24 24"><circle cx="14" cy="10" r="6"/><line x1="4" y1="20" x2="10" y2="14"/></svg></div>
+        <span>Sports Courts</span>
+      </a>
+      <a class="icon-item" href="#popup">
+        <div class="circle"><svg width="28" height="28" stroke="#fff" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M3 20h18M6 20V10l6-5 6 5v10"/></svg></div>
+        <span>Kids Play Areas</span>
+      </a>
+      <a class="icon-item" href="#popup">
+        <div class="circle"><svg width="28" height="28" stroke="#fff" fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22v-9M12 13c-4 0-7-3-7-7 4 0 7 3 7 7zM12 13c4 0 7-3 7-7-4 0-7 3-7 7z"/></svg></div>
+        <span>Landscaped Gardens</span>
+      </a>
+      <a class="icon-item" href="#popup">
+        <div class="circle"><svg width="28" height="28" stroke="#fff" fill="none" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><path d="M6 19c2-4 10-4 12 0"/></svg></div>
+        <span>Yoga Spaces</span>
+      </a>
     </div>
     <div class="cta-row">
-      <button class="pill-gold" onclick="openForm('Download Brochure & Cost Sheet')">DOWNLOAD BROCHURE →</button>
-      <button class="pill-dark" onclick="openForm('Schedule VIP Site Visit')">BOOK VIP SITE VISIT</button>
+      <a class="pill-gold" href="#popup">DOWNLOAD BROCHURE →</a>
+      <a class="pill-dark" href="#popup">BOOK VIP SITE VISIT</a>
     </div>
   </div>
 </section>
 
-<!-- 2. FULL-SCREEN SEAMLESS LOOP VIDEO 1 (ARCHITECTURE & POOL) -->
+<!-- 2. FULL-SCREEN EDGE-TO-EDGE LOOP VIDEO SECTION (GOOGLE UNBLOCKED CDN) -->
 <section class="video-sec" id="walkthrough">
   <video class="bg-video" autoplay loop muted playsinline poster="./Assetz-City-of-Palms-7.jpg">
-    <source src="https://coverr.co" type="video/mp4">
     <source src="https://googleapis.com" type="video/mp4">
   </video>
   <div class="v-over">
     <h2>Project Walkthrough & 360° Virtual Tour</h2>
     <p>Experience our grand entrance boulevard, 32,000 sq.ft. royal clubhouse & sunlit interiors in seamless loop.</p>
     <div class="cta-row">
-      <button class="pill-gold" onclick="openForm('360° Virtual Tour Access')">▶ LAUNCH VIRTUAL TOUR</button>
-      <button class="pill-dark" onclick="openForm('Live Video Walkthrough')">📹 LIVE VIDEO WALKTHROUGH</button>
+      <a class="pill-gold" href="#popup">▶ LAUNCH VIRTUAL TOUR</a>
+      <a class="pill-dark" href="#popup">📹 LIVE VIDEO WALKTHROUGH</a>
     </div>
   </div>
 </section>
@@ -129,10 +153,3 @@ footer{background:#02201f;color:#a8a29e;text-align:center;padding:24px 20px 70px
       <div><h3>35+</h3><p>Clubhouse Amenities</p></div>
       <div><h3>100%</h3><p>RERA Approved</p></div>
     </div>
-  </div>
-</div>
-
-<!-- 4. PLANS & CONFIGURATIONS -->
-<div class="sec" id="plans">
-  <div class="sec-title"><span>Master Plans & Configurations</span><h2>Signature Residences Crafted for Comfort</h2></div>
-  <div class="grid3">
