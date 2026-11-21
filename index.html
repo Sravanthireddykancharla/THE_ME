@@ -1,305 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HIRANYA ROYALE — Signature Luxury Residences in Whitefield, Bengaluru</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    html { scroll-behavior: smooth; }
-    body { background-color: #faf8f5; color: #1c1917; line-height: 1.65; }
-
-    /* Top Luxury Builder Navbar */
-    nav {
-      background: #ffffff;
-      padding: 15px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #d4af37;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    }
-    .brand { display: flex; flex-direction: column; }
-    .logo { font-size: 22px; font-weight: 900; color: #042f2e; letter-spacing: 1.5px; }
-    .sub-logo { font-size: 11px; color: #9a7b2c; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-    .nav-links { display: flex; gap: 22px; align-items: center; }
-    .nav-links a { text-decoration: none; color: #042f2e; font-size: 14px; font-weight: 700; }
-    .nav-btn {
-      background: #042f2e;
-      color: #fde047;
-      padding: 10px 22px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 14px;
-      border: 1.5px solid #d4af37;
-      cursor: pointer;
-    }
-
-    /* 1. HERO SECTION WITH YOUR EXACT Assetz-City-of-Palms-7.jpg PHOTO */
-    .hero {
-      position: relative;
-      background-color: #042f2e;
-      color: #ffffff;
-      padding: 85px 6% 105px;
-      border-bottom: 4px solid #d4af37;
-      overflow: hidden;
-    }
-    .hero-bg-img {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: 0;
-      opacity: 0.48;
-    }
-    .hero-gradient {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(90deg, rgba(4, 47, 46, 0.88) 0%, rgba(4, 47, 46, 0.72) 60%, rgba(4, 47, 46, 0.65) 100%);
-      z-index: 1;
-    }
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 1140px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.25fr 0.95fr;
-      gap: 42px;
-      align-items: center;
-    }
-    .rera-tag {
-      display: inline-block;
-      background: rgba(212, 175, 55, 0.22);
-      border: 1px solid #d4af37;
-      color: #fde047;
-      padding: 6px 16px;
-      border-radius: 4px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-    .hero h1 {
-      font-size: 46px;
-      font-weight: 900;
-      line-height: 1.15;
-      margin-bottom: 16px;
-      color: #ffffff;
-    }
-    .hero h1 span { color: #fde047; }
-    .hero p {
-      font-size: 18px;
-      color: #f1f5f9;
-      margin-bottom: 28px;
-      max-width: 560px;
-    }
-
-    /* 5. WORKING ENQUIRY FORM CARD */
-    .form-card {
-      background: #ffffff;
-      color: #1c1917;
-      padding: 32px 28px;
-      border-radius: 12px;
-      border-top: 5px solid #d4af37;
-      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.4);
-    }
-    .form-card h3 { font-size: 22px; color: #042f2e; font-weight: 800; margin-bottom: 4px; }
-    .form-card p { font-size: 13px; color: #57534e; margin-bottom: 18px; }
-    .form-group { margin-bottom: 14px; text-align: left; }
-    .form-group label { display: block; font-size: 12px; font-weight: 700; color: #042f2e; margin-bottom: 5px; text-transform: uppercase; }
-    .form-group input, .form-group select {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1.5px solid #d6d3d1;
-      border-radius: 6px;
-      font-size: 14px;
-      color: #1c1917;
-      background: #fafaf9;
-    }
-    .form-group input:focus, .form-group select:focus { outline: none; border-color: #042f2e; background: #ffffff; }
-
-    /* Buttons & CTAs */
-    .btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-gold {
-      background: linear-gradient(135deg, #d4af37, #b48a1e);
-      color: #ffffff;
-      border: none;
-      padding: 14px 26px;
-      border-radius: 6px;
-      font-size: 15px;
-      font-weight: 800;
-      cursor: pointer;
-      letter-spacing: 0.4px;
-      box-shadow: 0 8px 20px rgba(180, 138, 30, 0.35);
-    }
-    .btn-outline-light {
-      background: rgba(4, 47, 46, 0.65);
-      color: #fde047;
-      border: 1.5px solid #fde047;
-      padding: 13px 24px;
-      border-radius: 6px;
-      font-size: 15px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    .btn-full { width: 100%; text-align: center; display: block; margin-top: 6px; }
-
-    /* 2. SOCIAL PROOF STRIP */
-    .social-proof { max-width: 1140px; margin: -45px auto 65px; padding: 0 20px; position: relative; z-index: 10; }
-    .proof-grid {
-      background: #ffffff;
-      border: 1px solid #e7e5e4;
-      border-bottom: 4px solid #d4af37;
-      border-radius: 10px;
-      padding: 28px 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      text-align: center;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-    }
-    .proof-item h3 { font-size: 30px; color: #042f2e; font-weight: 900; }
-    .proof-item p { font-size: 13px; color: #78716c; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
-
-    /* Shared Section Styles */
-    .container { max-width: 1140px; margin: 75px auto; padding: 0 20px; }
-    .sec-head { text-align: center; margin-bottom: 45px; }
-    .sec-head span { color: #9a7b2c; font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
-    .sec-head h2 { font-size: 34px; color: #042f2e; margin-top: 6px; font-weight: 800; }
-    .divider { width: 60px; height: 3px; background: #d4af37; margin: 14px auto 0; }
-
-    /* 3. KEY HIGHLIGHTS (RESIDENCES) */
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
-    .config-card {
-      background: #ffffff;
-      border: 1px solid #e7e5e4;
-      border-radius: 12px;
-      padding: 32px 26px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
-      transition: transform 0.25s, border-color 0.25s;
-    }
-    .config-card:hover { transform: translateY(-5px); border-color: #d4af37; }
-    .config-tag {
-      display: inline-block;
-      background: #f0fdf4;
-      color: #042f2e;
-      border: 1px solid #bbf7d0;
-      padding: 4px 12px;
-      border-radius: 4px;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-    .config-card h3 { font-size: 23px; color: #042f2e; margin-bottom: 8px; }
-    .config-card p { font-size: 15px; color: #57534e; margin-bottom: 20px; }
-    .config-specs {
-      background: #faf8f5;
-      padding: 14px;
-      border-radius: 8px;
-      font-size: 14px;
-      color: #1c1917;
-      font-weight: 700;
-      margin-bottom: 20px;
-      border-left: 3px solid #d4af37;
-    }
-
-    /* 4. BENEFITS & AMENITIES */
-    .benefits-wrap {
-      background: #042f2e;
-      color: #ffffff;
-      border-radius: 16px;
-      padding: 55px 34px;
-    }
-    .benefits-wrap .sec-head span { color: #fde047; }
-    .benefits-wrap .sec-head h2 { color: #ffffff; }
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
-    .benefit-card {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      padding: 24px;
-      border-radius: 10px;
-    }
-    .benefit-card h4 { color: #fde047; font-size: 18px; margin-bottom: 8px; }
-    .benefit-card p { color: #e2e8f0; font-size: 14px; }
-
-    /* 5. LOCATION ADVANTAGE */
-    .loc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .loc-box {
-      background: #ffffff;
-      border: 1px solid #e7e5e4;
-      border-top: 4px solid #042f2e;
-      border-radius: 10px;
-      padding: 24px 18px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-    }
-    .loc-time { font-size: 28px; font-weight: 900; color: #9a7b2c; }
-    .loc-name { font-size: 15px; color: #042f2e; font-weight: 700; margin-top: 6px; }
-
-    /* 6. FINAL CTA WITH BACKGROUND PHOTO */
-    .final-cta {
-      position: relative;
-      background-color: #042f2e;
-      color: #ffffff;
-      border: 2px solid #d4af37;
-      border-radius: 16px;
-      padding: 60px 28px;
-      text-align: center;
-      overflow: hidden;
-    }
-    .final-cta-content { position: relative; z-index: 2; }
-    .final-cta h2 { font-size: 34px; color: #fde047; margin-bottom: 12px; }
-    .final-cta p { font-size: 17px; color: #f1f5f9; max-width: 650px; margin: 0 auto 30px; }
-
-    /* 4. POPUPS */
-    .popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-    .popup-box {
-      background: #ffffff;
-      color: #1c1917;
-      border-top: 6px solid #d4af37;
-      border-radius: 14px;
-      padding: 34px;
-      max-width: 440px;
-      width: 90%;
-      text-align: center;
-      position: relative;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
-    }
-    .close { position: absolute; top: 12px; right: 18px; font-size: 28px; color: #042f2e; cursor: pointer; font-weight: bold; }
-    .popup-box h2 { color: #042f2e; margin-bottom: 12px; }
-    .popup-box p { color: #44403c; font-size: 15px; line-height: 1.8; }
-    .wa-btn {
-      display: inline-block;
-      margin-top: 20px;
-      background: #16a34a;
-      color: #ffffff;
-      padding: 14px 28px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 800;
-      width: 100%;
-    }
-
-    footer {
-      background: #02201f;
-      color: #a8a29e;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 70px;
-      font-size: 13px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HIRANYA ROYALE — Whitefield, Bengaluru</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#faf8f5;color:#1c1917;line-height:1.6}
+nav{background:#fff;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #d4af37;position:sticky;top:0;z-index:99}
+.logo{font-size:22px;font-weight:900;color:#042f2e;letter-spacing:1.5px}
+.nav-btn{background:#042f2e;color:#fde047;padding:9px 20px;border-radius:6px;font-weight:700;border:1.5px solid #d4af37;cursor:pointer}
+.hero{background:linear-gradient(90deg,rgba(4,47,46,.88),rgba(4,47,46,.72)),url('./Assetz-City-of-Palms-7.jpg') center/cover no-repeat;color:#fff;padding:80px 6% 100px;border-bottom:4px solid #d4af37}
+.hero-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.2fr .9fr;gap:36px;align-items:center}
+.tag{display:inline-block;background:rgba(212,175,55,.22);border:1px solid #d4af37;color:#fde047;padding:5px 14px;border-radius:4px;font-size:12px;font-weight:700;margin-bottom:15px}
+.hero h1{font-size:44px;font-weight:900;line-height:1.15;margin-bottom:14px}
+.hero h1 span{color:#fde047}
+.hero p{font-size:18px;color:#f1f5f9;margin-bottom:25px}
+.form-box{background:#fff;color:#1c1917;padding:28px;border-radius:12px;border-top:5px solid #d4af37;box-shadow:0 20px 45px rgba(0,0,0,.35)}
+.form-box h3{color:#042f2e;font-size:20px;margin-bottom:14px}
+.form-box input,.form-box select{width:100%;padding:11px;margin-bottom:12px;border:1.5px solid #d6d3d1;border-radius:6px;font-size:14px}
+.btn-gold{background:linear-gradient(135deg,#d4af37,#b48a1e);color:#fff;border:none;padding:13px 24px;border-radius:6px;font-size:15px;font-weight:800;cursor:pointer}
+.btn-out{background:rgba(4,47,46,.6);color:#fde047;border:1.5px solid #fde047;padding:12px 22px;border-radius:6px;font-size:15px;font-weight:700;cursor:pointer}
+.proof{max-width:1100px;margin:-40px auto 55px;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.p-card{background:#fff;padding:24px;border-radius:10px;text-align:center;border-bottom:4px solid #d4af37;box-shadow:0 10px 25px rgba(0,0,0,.07)}
+.p-card h3{font-size:28px;color:#042f2e;font-weight:900}
+.p-card p{font-size:12px;color:#78716c;font-weight:700;text-transform:uppercase}
+.sec{max-width:1100px;margin:65px auto;padding:0 20px}
+.sec h2{text-align:center;font-size:32px;color:#042f2e;margin-bottom:35px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:#fff;padding:28px;border-radius:12px;border:1px solid #e7e5e4;box-shadow:0 8px 20px rgba(0,0,0,.04)}
+.card h3{color:#042f2e;font-size:22px;margin-bottom:8px}
+.card p{color:#57534e;font-size:15px;margin-bottom:16px}
+.spec{background:#faf8f5;padding:12px;border-left:3px solid #d4af37;font-weight:700;font-size:14px;margin-bottom:16px}
+.ben{background:#042f2e;color:#fff;padding:50px 28px;border-radius:16px}
+.ben h2{color:#fde047}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.b-item{background:rgba(255,255,255,.07);padding:20px;border-radius:10px;border:1px solid rgba(212,175,55,.4)}
+.b-item h4{color:#fde047;margin-bottom:6px}
+.cta{background:linear-gradient(rgba(4,47,46,.85),rgba(4,47,46,.92)),url('./Assetz-City-of-Palms-7.jpg') center/cover;color:#fff;padding:55px 24px;border-radius:16px;text-align:center;border:2px solid #d4af37}
+.cta h2{color:#fde047;margin-bottom:12px}
+.pop{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);justify-content:center;align-items:center;z-index:999}
+.pop-in{background:#fff;padding:30px;border-radius:12px;border-top:5px solid #d4af37;max-width:410px;width:90%;text-align:center;position:relative}
+.cls{position:absolute;top:10px;right:16px;font-size:26px;cursor:pointer;font-weight:bold}
+.wa{display:block;margin-top:16px;background:#16a34a;color:#fff;padding:13px;border-radius:6px;text-decoration:none;font-weight:800}
+footer{background:#02201f;color:#a8a29e;text-align:center;padding:24px;margin-top:60px;font-size:13px}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero h1{font-size:32px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">HIRANYA ROYALE</div><button class="nav-btn" onclick="document.getElementById('vPop').style.display='flex'">Schedule Visit</button></nav>
+<section class="hero"><div class="hero-grid">
+<div><div class="tag">RERA Certified • Whitefield, Bengaluru</div><h1>A Home That Speaks <span>Your Success.</span></h1><p>Crafted in Light, Space, and Serenity — Iconic 2, 3 & 4 BHK Vastu residences amidst 78% lush greenery.</p><button class="btn-gold" onclick="document.getElementById('pPop').style.display='flex'">💎 Download Price Sheet</button> <button class="btn-out" onclick="document.getElementById('vPop').style.display='flex'">🚘 Book VIP Tour</button></div>
+<div class="form-box"><h3>Get Instant Price Sheet & Offers</h3><form onsubmit="goWa(event)"><input type="text" id="n" placeholder="Full Name *" required><input type="tel" id="p" placeholder="WhatsApp Number *" required><select id="b"><option>2 BHK Signature Suite (1,340 Sq.Ft.)</option><option selected>3 BHK Grand Corner Home (1,920 Sq.Ft.)</option><option>4 BHK Sovereign Sky Villa (3,200 Sq.Ft.)</option></select><button type="submit" class="btn-gold" style="width:100%">Unlock Cost Sheet on WhatsApp →</button></form></div>
+</div></section>
+<div class="proof"><div class="p-card"><h3>78%</h3><p>Open Green Podium</p></div><div class="p-card"><h3>35+</h3><p>Clubhouse Amenities</p></div><div class="p-card"><h3>650+</h3><p>Happy Families</p></div><div class="p-card"><h3>100%</h3><p>RERA & Vastu Approved</p></div></div>
+<div class="sec"><h2>Signature Residences Crafted for Comfort</h2><div class="grid3">
+<div class="card"><h3>2 BHK Signature Suites</h3><p>Zero-wastage layouts with sunlit living rooms & garden decks.</p><div class="spec">📐 1,340 – 1,480 Sq.Ft. • Vastu</div><button class="btn-gold" style="width:100%" onclick="document.getElementById('pPop').style.display='flex'">Get 2 BHK Price Sheet</button></div>
+<div class="card"><h3>3 BHK Grand Corner Homes</h3><p>Three-side open ventilation, no common walls & private foyer.</p><div class="spec">📐 1,920 – 2,250 Sq.Ft. • Dual Decks</div><button class="btn-gold" style="width:100%" onclick="document.getElementById('pPop').style.display='flex'">Get 3 BHK Price Sheet</button></div>
+<div class="card"><h3>4 BHK Sovereign Sky Villas</h3><p>Double-height salon, Italian marble & private terrace lounge.</p><div class="spec">📐 3,200 – 3,650 Sq.Ft. • Private Lift</div><button class="btn-gold" style="width:100%" onclick="document.getElementById('pPop').style.display='flex'">Get 4 BHK Price Sheet</button></div>
+</div></div>
+<div class="sec"><div class="ben"><h2>Why Discerning Homebuyers Choose Hiranya</h2><div class="grid2">
+<div class="b-item"><h4>🏛️ Architectural Brilliance</h4><p>Maximum natural light, cross-ventilation & zero common walls.</p></div>
+<div class="b-item"><h4>🏊 32,000 Sq.Ft. Clubhouse</h4><p>Rooftop infinity pool, mini-theatre, indoor sports & spa.</p></div>
+<div class="b-item"><h4>📍 Prime Whitefield Location</h4><p>4 mins to Purple Line Metro, 6 mins to ITPL & top schools.</p></div>
+<div class="b-item"><h4>🏦 100% Bank & RERA Approved</h4><p>Pre-approved loans from SBI, HDFC, ICICI & Axis Bank.</p></div>
+</div></div></div>
+<div class="sec"><div class="cta"><h2>Experience Your Future Home in Person</h2><p style="margin-bottom:22px">Book a complimentary chauffeur-driven family site tour & save up to ₹18 Lakhs.</p><button class="btn-gold" onclick="document.getElementById('vPop').style.display='flex'">🚘 Schedule Free VIP Site Visit</button></div></div>
+<div id="pPop" class="pop"><div class="pop-in"><span class="cls" onclick="document.getElementById('pPop').style.display='none'">&times;</span><h2>Pre-Launch Cost Sheet</h2><p>✔ Save up to ₹18 Lakhs Today<br>✔ Zero Floor-Rise Charges<br>✔ 2, 3 & 4 BHK Master Floor Plans</p><a href="https://wa.me." class="wa">💬 Get PDF on WhatsApp</a></div></div>
+<div id="vPop" class="pop"><div class="pop-in"><span class="cls" onclick="document.getElementById('vPop').style.display='none'">&times;</span><h2>Book Chauffeur VIP Visit</h2><p>Tour our furnished model apartment in Whitefield with complimentary home pick-up & drop.</p><a href="https://wa.me." class="wa">💬 Confirm Visit on WhatsApp</a></div></div>
+<footer>© 2026 HIRANYA ROYALE • Whitefield, Bengaluru. All Rights Reserved.</footer>
+<script>function goWa(e){e.preventDefault();window.open("https://wa.me"+encodeURIComponent(document.getElementById('n').value)+"%0APhone:%20"+encodeURIComponent(document.getElementById('p').value)+"%0AFlat:%20"+encodeURIComponent(document.getElementById('b').value),"_blank")}</script>
+</body>
+</html>
