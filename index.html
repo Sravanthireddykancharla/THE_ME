@@ -8,61 +8,110 @@
 *{box-sizing:border-box}
 body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#faf8f5;color:#1c1917}
 nav{background:#fff;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #d4af37;box-shadow:0 2px 10px rgba(0,0,0,.06)}
-.logo{font-size:22px;font-weight:900;color:#042f2e;letter-spacing:1px}
-.btn{background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;border:none;padding:13px 24px;border-radius:6px;font-weight:800;cursor:pointer;font-size:15px;box-shadow:0 6px 18px rgba(217,119,6,.35)}
-.btn-out{background:#042f2e;color:#fde047;border:1.5px solid #fde047;padding:12px 24px;border-radius:6px;font-weight:700;cursor:pointer;font-size:15px}
-.hero{background:url('./Assetz-City-of-Palms-7.jpg') center/cover no-repeat;padding:100px 6%;text-align:center;border-bottom:4px solid #d4af37}
-.hero-box{background:rgba(4,47,46,.62);backdrop-filter:blur(6px);max-width:780px;margin:0 auto;padding:42px 28px;border-radius:16px;border:1.5px solid rgba(253,224,71,.65);color:#fff}
-.hero h1{font-size:46px;margin:0 0 14px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.logo{font-size:22px;font-weight:900;color:#042f2e;letter-spacing:1.2px}
+.nav-btn{background:#042f2e;color:#fde047;border:1.5px solid #d4af37;padding:10px 22px;border-radius:30px;font-weight:700;cursor:pointer;font-size:14px}
+
+/* Full Open Hero with Bottom Circular Icons & Pill Brochure Button (No Box) */
+.hero{background:linear-gradient(180deg,rgba(0,0,0,.22) 0%,rgba(0,0,0,.15) 45%,rgba(0,0,0,.78) 100%),url('./Assetz-City-of-Palms-7.jpg') center/cover no-repeat;min-height:88vh;padding:90px 6% 55px;display:flex;flex-direction:column;justify-content:space-between;text-align:center;color:#fff;border-bottom:4px solid #d4af37}
+.hero-top{max-width:850px;margin:0 auto}
+.hero h1{font-size:52px;margin:0 0 12px;text-shadow:0 4px 20px rgba(0,0,0,.85)}
 .hero span{color:#fde047}
-.hero p{font-size:18px;margin:0 auto 28px;color:#f8fafc}
+.hero p{font-size:20px;margin:0 auto;color:#ffffff;font-weight:500;text-shadow:0 3px 14px rgba(0,0,0,.9)}
+
+/* Circular Amenity Icons Row */
+.icon-row{display:flex;justify-content:center;gap:42px;flex-wrap:wrap;margin:40px auto 30px}
+.icon-item{display:flex;flex-direction:column;align-items:center;gap:10px}
+.circle-icon{width:76px;height:76px;border-radius:50%;border:2px solid rgba(255,255,255,.85);background:rgba(0,0,0,.25);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center}
+.circle-icon svg{width:34px;height:34px;stroke:#ffffff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.icon-item span{font-size:15px;font-weight:700;color:#ffffff;text-shadow:0 2px 8px rgba(0,0,0,.9)}
+
+/* Pill Download Brochure CTA Button */
+.pill-btn{background:linear-gradient(90deg,#d4af37,#f3d27a,#c59b27);color:#1c1917;border:none;padding:16px 46px;border-radius:50px;font-size:17px;font-weight:800;letter-spacing:1px;text-transform:uppercase;cursor:pointer;box-shadow:0 10px 28px rgba(0,0,0,.45)}
+
+/* Sections Below */
 .sec{max-width:1080px;margin:55px auto;padding:0 20px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.card{background:#fff;padding:24px;border-radius:10px;border-top:4px solid #042f2e;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.card{background:#fff;padding:26px;border-radius:12px;border-top:4px solid #042f2e;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.btn{background:#d4af37;color:#fff;border:none;padding:11px 22px;border-radius:30px;font-weight:700;cursor:pointer;font-size:14px}
 .ben{background:linear-gradient(135deg,#042f2e,#065f46);color:#fff;padding:42px 25px;border-radius:14px}
+
+/* Popup Form */
 .pop{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);justify-content:center;align-items:center;z-index:99}
-.pop-in{background:#fff;padding:30px 26px;border-radius:12px;border-top:5px solid #d4af37;max-width:400px;width:90%;text-align:center;position:relative}
+.pop-in{background:#fff;padding:30px 26px;border-radius:14px;border-top:5px solid #d4af37;max-width:400px;width:90%;text-align:center;position:relative}
 .pop-in input{width:100%;padding:12px;margin:8px 0;border:1.5px solid #d6d3d1;border-radius:6px;font-size:14px}
 .cls{position:absolute;top:10px;right:16px;font-size:26px;cursor:pointer;color:#042f2e;font-weight:bold}
-@media(max-width:768px){.hero h1{font-size:32px}}
+@media(max-width:768px){.hero h1{font-size:34px}.icon-row{gap:22px}.pill-btn{padding:14px 28px;font-size:15px}}
 </style>
 </head>
 <body>
-<nav><div class="logo">HIRANYA ROYALE</div><button class="btn" onclick="openForm('VIP Site Visit')">Book VIP Visit</button></nav>
+
+<nav>
+  <div class="logo">HIRANYA ROYALE</div>
+  <button class="nav-btn" onclick="openForm('VIP Site Visit')">BOOK VIP VISIT →</button>
+</nav>
 
 <section class="hero">
-<div class="hero-box">
-<h1>A Home That Speaks <span>Your Success.</span></h1>
-<p>Crafted in Light, Space, and Serenity — Iconic 2, 3 & 4 BHK Luxury Residences in Whitefield, Bengaluru.</p>
-<button class="btn" onclick="openForm('Pre-Launch Price Sheet')">💎 Download Price Sheet</button>
-<button class="btn-out" onclick="openForm('VIP Site Visit')">🚘 Schedule Site Visit</button>
-</div>
+  <div class="hero-top">
+    <h1>A Home That Speaks <span>Your Success.</span></h1>
+    <p>Crafted in Light, Space, and Serenity — Iconic 2, 3 & 4 BHK Luxury Residences in Whitefield, Bengaluru.</p>
+  </div>
+
+  <div>
+    <div class="icon-row">
+      <div class="icon-item">
+        <div class="circle-icon"><svg viewBox="0 0 24 24"><circle cx="14" cy="10" r="6"/><line x1="4" y1="20" x2="10" y2="14"/><circle cx="7" cy="7" r="1.5"/></svg></div>
+        <span>Sports Courts</span>
+      </div>
+      <div class="icon-item">
+        <div class="circle-icon"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 20V10l6-5 6 5v10M10 20v-5h4v5"/></svg></div>
+        <span>Kids Play Areas</span>
+      </div>
+      <div class="icon-item">
+        <div class="circle-icon"><svg viewBox="0 0 24 24"><path d="M12 22v-9M12 13c-4 0-7-3-7-7 4 0 7 3 7 7zM12 13c4 0 7-3 7-7-4 0-7 3-7 7z"/></svg></div>
+        <span>Landscaped Gardens</span>
+      </div>
+      <div class="icon-item">
+        <div class="circle-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><path d="M6 19c2-4 10-4 12 0M8 13l4-2 4 2"/></svg></div>
+        <span>Yoga Spaces</span>
+      </div>
+    </div>
+
+    <button class="pill-btn" onclick="openForm('Download Brochure & Price Sheet')">DOWNLOAD BROCHURE &nbsp;→</button>
+  </div>
 </section>
 
-<div class="sec"><h2 style="text-align:center;color:#042f2e">Signature Residences</h2><div class="grid">
-<div class="card"><h3>2 BHK Suites</h3><p>1,340 Sq.Ft. • Vastu Compliant • Garden View</p><button class="btn" onclick="openForm('2 BHK Price Sheet')">Price Sheet</button></div>
-<div class="card"><h3>3 BHK Corner Homes</h3><p>1,920 Sq.Ft. • Zero Common Walls • Dual Decks</p><button class="btn" onclick="openForm('3 BHK Price Sheet')">Price Sheet</button></div>
-<div class="card"><h3>4 BHK Sky Villas</h3><p>3,200 Sq.Ft. • Private Lift • Italian Marble</p><button class="btn" onclick="openForm('4 BHK Price Sheet')">Price Sheet</button></div>
-</div></div>
+<div class="sec">
+  <h2 style="text-align:center;color:#042f2e">Signature Residences</h2>
+  <div class="grid">
+    <div class="card"><h3>2 BHK Suites</h3><p>1,340 Sq.Ft. • Vastu Compliant • Garden View</p><button class="btn" onclick="openForm('2 BHK Brochure & Price')">Get Price Sheet</button></div>
+    <div class="card"><h3>3 BHK Corner Homes</h3><p>1,920 Sq.Ft. • Zero Common Walls • Dual Decks</p><button class="btn" onclick="openForm('3 BHK Brochure & Price')">Get Price Sheet</button></div>
+    <div class="card"><h3>4 BHK Sky Villas</h3><p>3,200 Sq.Ft. • Private Lift • Italian Marble</p><button class="btn" onclick="openForm('4 BHK Brochure & Price')">Get Price Sheet</button></div>
+  </div>
+</div>
 
-<div class="sec"><div class="ben"><h2 style="color:#fde047;text-align:center">Why Choose Hiranya Royale</h2><div class="grid">
-<div><h4>🌿 78% Open Greens</h4><p>Vehicle-free podium & 32,000 sq.ft. clubhouse.</p></div>
-<div><h4>📍 Prime Whitefield</h4><p>4 mins to Metro & 6 mins to ITPL Tech Parks.</p></div>
-<div><h4>🛡️ 100% RERA Approved</h4><p>Pre-approved loans from SBI, HDFC & ICICI.</p></div>
-</div></div></div>
+<div class="sec">
+  <div class="ben">
+    <h2 style="color:#fde047;text-align:center">Why Choose Hiranya Royale</h2>
+    <div class="grid">
+      <div><h4>🌿 78% Open Greens</h4><p>Vehicle-free podium & 32,000 sq.ft. clubhouse.</p></div>
+      <div><h4>📍 Prime Whitefield</h4><p>4 mins to Metro & 6 mins to ITPL Tech Parks.</p></div>
+      <div><h4>🛡️ 100% RERA Approved</h4><p>Pre-approved loans from SBI, HDFC & ICICI.</p></div>
+    </div>
+  </div>
+</div>
 
 <div id="fPop" class="pop">
-<div class="pop-in">
-<span class="cls" onclick="fPop.style.display='none'">&times;</span>
-<h3 id="popTitle" style="margin-top:0;color:#042f2e">Get Instant Price Sheet</h3>
-<p style="font-size:13px;color:#57534e;margin-bottom:14px">Enter your details below to receive brochure & pricing</p>
-<form onsubmit="event.preventDefault();window.open('https://wa.me)">
-<input id="n" type="text" placeholder="Full Name *" required>
-<input id="p" type="tel" placeholder="Phone Number *" required>
-<input id="e" type="email" placeholder="Email Address *" required>
-<button type="submit" class="btn" style="width:100%;margin-top:8px">Submit & Get Details →</button>
-</form>
-</div>
+  <div class="pop-in">
+    <span class="cls" onclick="fPop.style.display='none'">&times;</span>
+    <h3 id="popTitle" style="margin-top:0;color:#042f2e">Download Brochure</h3>
+    <p style="font-size:13px;color:#57534e;margin-bottom:14px">Enter your details to get instant brochure & pricing</p>
+    <form onsubmit="event.preventDefault();window.open('https://wa.me)">
+      <input id="n" type="text" placeholder="Full Name *" required>
+      <input id="p" type="tel" placeholder="Phone Number *" required>
+      <input id="e" type="email" placeholder="Email Address *" required>
+      <button type="submit" class="pill-btn" style="width:100%;margin-top:10px;padding:13px">SUBMIT & DOWNLOAD →</button>
+    </form>
+  </div>
 </div>
 
 <script>
