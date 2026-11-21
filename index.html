@@ -27,17 +27,18 @@ nav{background:#fff;padding:14px 5%;display:flex;justify-content:space-between;a
 .pill-gold{background:linear-gradient(90deg,#d4af37,#f3d27a,#c59b27);color:#1c1917;border:none;padding:15px 36px;border-radius:50px;font-size:15px;font-weight:800;text-transform:uppercase;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,.4)}
 .pill-dark{background:rgba(4,47,46,.9);color:#fde047;border:1.5px solid #fde047;padding:14px 28px;border-radius:50px;font-size:14px;font-weight:800;text-transform:uppercase;cursor:pointer}
 
+/* 2. FULL-SCREEN EDGE-TO-EDGE LOOP VIDEO SECTION */
+.video-sec{position:relative;width:100%;min-height:82vh;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;border-bottom:4px solid #c59b27;background:#042f2e}
+.bg-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.v-over{position:relative;z-index:2;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.52) 100%);padding:80px 6%;width:100%;min-height:82vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.v-over h2{font-size:44px;color:#fde047;margin-bottom:14px;text-shadow:0 4px 18px rgba(0,0,0,.9)}
+.v-over p{font-size:19px;max-width:720px;margin:0 auto 28px;text-shadow:0 2px 12px rgba(0,0,0,.9)}
+
 /* Shared Sections */
 .sec{max-width:1120px;margin:65px auto;padding:0 20px}
 .sec-title{text-align:center;margin-bottom:35px}
 .sec-title span{color:#9a7b2c;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
 .sec-title h2{font-size:32px;color:#042f2e;margin-top:4px;font-weight:800}
-
-/* 2. LOOP VIDEO SECTION RIGHT BELOW HOME PAGE */
-.video-sec{position:relative;border-radius:16px;overflow:hidden;min-height:440px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;border:2px solid #c59b27;background:#042f2e}
-.bg-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.v-over{position:relative;z-index:2;background:rgba(4,47,46,.65);padding:50px 24px;width:100%}
-.v-over h2{font-size:34px;color:#fde047;margin-bottom:10px}
 
 /* 3. ABOUT, PLANS, AMENITIES, LOCATION */
 .about-box{background:#fff;border:1px solid #e7e5e4;border-radius:14px;padding:34px 26px;text-align:center;box-shadow:0 8px 25px rgba(0,0,0,.05)}
@@ -64,7 +65,7 @@ nav{background:#fff;padding:14px 5%;display:flex;justify-content:space-between;a
 .cls{position:absolute;top:10px;right:16px;font-size:26px;cursor:pointer;font-weight:bold}
 .pop-in input{width:100%;padding:11px;margin:7px 0;border:1.5px solid #d6d3d1;border-radius:6px}
 footer{background:#02201f;color:#a8a29e;text-align:center;padding:24px 20px 70px;margin-top:50px;font-size:13px}
-@media(max-width:800px){.nav-menu a{display:none}.hero h1{font-size:34px}}
+@media(max-width:800px){.nav-menu a{display:none}.hero h1,.v-over h2{font-size:32px}}
 </style>
 </head>
 <body>
@@ -101,23 +102,21 @@ footer{background:#02201f;color:#a8a29e;text-align:center;padding:24px 20px 70px
   </div>
 </section>
 
-<!-- 2. SEAMLESS LOOP VIDEO SECTION RIGHT BELOW HOME PAGE -->
-<div class="sec" id="walkthrough">
-  <div class="video-sec">
-    <video class="bg-video" autoplay loop muted playsinline poster="./Assetz-City-of-Palms-7.jpg">
-      <source src="./tour.mp4" type="video/mp4">
-      <source src="https://mixkit.co" type="video/mp4">
-    </video>
-    <div class="v-over">
-      <h2>Project Walkthrough & 360° Virtual Tour</h2>
-      <p style="margin-bottom:22px">Experience our grand entrance boulevard, 32,000 sq.ft. royal clubhouse & sunlit interiors in seamless loop.</p>
-      <div class="cta-row">
-        <button class="pill-gold" onclick="openForm('360° Virtual Tour Access')">▶ LAUNCH VIRTUAL TOUR</button>
-        <button class="pill-dark" onclick="openForm('Live Video Walkthrough')">📹 LIVE VIDEO WALKTHROUGH</button>
-      </div>
+<!-- 2. FULL-SCREEN SEAMLESS LOOP VIDEO 1 (ARCHITECTURE & POOL) -->
+<section class="video-sec" id="walkthrough">
+  <video class="bg-video" autoplay loop muted playsinline poster="./Assetz-City-of-Palms-7.jpg">
+    <source src="https://coverr.co" type="video/mp4">
+    <source src="https://googleapis.com" type="video/mp4">
+  </video>
+  <div class="v-over">
+    <h2>Project Walkthrough & 360° Virtual Tour</h2>
+    <p>Experience our grand entrance boulevard, 32,000 sq.ft. royal clubhouse & sunlit interiors in seamless loop.</p>
+    <div class="cta-row">
+      <button class="pill-gold" onclick="openForm('360° Virtual Tour Access')">▶ LAUNCH VIRTUAL TOUR</button>
+      <button class="pill-dark" onclick="openForm('Live Video Walkthrough')">📹 LIVE VIDEO WALKTHROUGH</button>
     </div>
   </div>
-</div>
+</section>
 
 <!-- 3. ABOUT PROJECT -->
 <div class="sec" id="about">
@@ -137,4 +136,3 @@ footer{background:#02201f;color:#a8a29e;text-align:center;padding:24px 20px 70px
 <div class="sec" id="plans">
   <div class="sec-title"><span>Master Plans & Configurations</span><h2>Signature Residences Crafted for Comfort</h2></div>
   <div class="grid3">
-    <div class="card"><h3>2 BHK Signature Suites</h3><p>Sunlit living rooms & private garden-facing balconies.</p><div class="spec">📐 1,340 – 1,480 Sq.Ft. • 100% Vastu</div><button class="card-btn" onclick="openForm('2 BHK Floor Plan & Cost Sheet')">Get 2 BHK Price Sheet</button></div>
